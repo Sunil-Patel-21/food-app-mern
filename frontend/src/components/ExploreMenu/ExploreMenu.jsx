@@ -21,7 +21,6 @@ function ExploreMenu({category,setCategory}) {
              className="explore-menu-list-item" key={index}>
               <img className={category===item.menu_name?"active":""} src={item.menu_image} alt={item.menu_name} />
               <p>{item.menu_name}</p>
-              <p>{category}</p>
             </div>
           );
         })}
