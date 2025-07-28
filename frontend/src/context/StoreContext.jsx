@@ -5,7 +5,7 @@ import {food_list} from "../assets/frontend_assets/assets"
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props)=>{
-// --
+    
     const [cartItems,setCartItems] = useState({});
 
     const addToCart = (itemId)=>{
@@ -25,7 +25,6 @@ const StoreContextProvider = (props)=>{
         
     },[cartItems])
 
-// --
     const contextValue = {
         food_list,
         cartItems,
