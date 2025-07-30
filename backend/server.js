@@ -19,6 +19,7 @@ connectDB();
 
 // api routes
 app.use("/api/food",foodRouter);
+app.use("/images",express.static("uploads")); // for serving images from uploads folder to frontend
 
 
 
