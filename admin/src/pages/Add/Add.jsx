@@ -61,7 +61,7 @@ function Add() {
         </div>
         <div className="add-product-name flex-col">
             <p>Product Name</p>
-            <input onChange={onChangeHandler} value={data.name} type="text" name='name' placeholder='Type here' />
+            <input required onChange={onChangeHandler} value={data.name} type="text" name='name' placeholder='Type here' />
         </div>
         <div className="add-product-description flex-col">
             <p>Description</p>
@@ -83,7 +83,7 @@ function Add() {
           </div>
           <div className="add-price flex-col">
             <p>Product Price</p>
-            <input onChange={onChangeHandler} value={data.price} type="number" name="price" placeholder='$20' />
+            <input required onChange={onChangeHandler} value={data.price} type="number" name="price" placeholder='$20' />
           </div>
         </div>
           <button type='submit' className='add-btn'>Add</button>
