@@ -1,16 +1,16 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import "./FoodItem.css";
 import { assets } from "../../assets/frontend_assets/assets";
 import { StoreContext } from "../../context/StoreContext";
 function FoodItem({ id, name, price, description, image }) {
 
-  const {cartItems,addToCart,removeFromCart} = useContext(StoreContext);
+  const {cartItems,addToCart,removeFromCart,url} = useContext(StoreContext);
   
   return (
     <div className="food-item">
       {/* main div  */}
       <div className="food-item-img-container">
-        <img className="food-item-image" src={image} alt="food-item-image" />
+        <img className="food-item-image" src={url+"/images/"+image} alt="food-item-image" />
         {!cartItems[id]
           ? (
           <img
