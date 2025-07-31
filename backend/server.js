@@ -1,9 +1,10 @@
+import 'dotenv/config'
 import express from "express";
 import cors from "cors";
-import dotenv from "dotenv";
 import { connectDB } from "./config/db.js";
 import foodRouter from "./routes/foodRoute.js";
-dotenv.config();
+import userRouter from "./routes/userRoute.js";
+
 
 // app config
 const app = express();
@@ -20,6 +21,7 @@ connectDB();
 // api routes
 app.use("/api/food",foodRouter);
 app.use("/images",express.static("uploads")); // for serving images from uploads folder to frontend
+app.use("/api/user",userRouter);
 
 
 
